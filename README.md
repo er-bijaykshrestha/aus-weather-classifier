@@ -172,6 +172,14 @@ High true negative rate (95% specificity), effectively minimizing false alarms.
 
 Precision of 75% for rainy days indicates that when the model forecasts rain, it is reliable 3 out of 4 times.
 
+## 📊 Visual Results
+
+| Confusion Matrix | Feature Importance |
+| :---: | :---: |
+| ![Confusion Matrix](confusion_matrix.png) | ![Feature Importance](feature_importance.png) |
+
+
+
 2. Atmospheric Feature Importance Rankings
 Extracted directly from the best-performing Random Forest estimator:
 
