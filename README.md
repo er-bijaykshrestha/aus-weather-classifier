@@ -17,7 +17,7 @@ An end-to-end Machine Learning classification pipeline built with **Python** and
 * **Baseline Accuracy**: 76.3% (naive majority-class baseline).
 * **Primary Classifier**: **Random Forest** optimized via Stratified K-Fold Cross-Validation, beating the baseline with an **84.0% test accuracy** and **0.81 macro precision**.
 
----
+
 
 ## 🏗️ Machine Learning Pipeline Architecture
 
@@ -45,7 +45,7 @@ GridSearchCV Hyperparameter Optimization (5-Fold StratifiedKFold)
 ▼
 Model Evaluation (Accuracy, Precision, Recall, F1, Confusion Matrix, Feature Importance)
 
----
+
 
 ## 💻 Key Source Code
 
@@ -143,9 +143,10 @@ grid_search_lr.fit(X_train, y_train)
 Model Performance Comparison
 
 Model	               Cross-Validation Score	   Test Accuracy	Precision (Rain: Yes)	Recall (Rain: Yes)	F1-Score (Rain: Yes)
-Zero-Rule Baseline	      —	                       76.3%	         0.00	                  0.00	                 0.00
-Logistic Regression	      83.0%	                    83.0%	         0.68	                  0.51	                 0.58
-Random Forest (Optimized)	85.1%	                    84.0%	         0.75	                  0.51	                 0.61
+Zero-Rule Baseline	          —	                        76.3%	         0.00	                  0.00	                 0.00
+Logistic Regression	          83.0%	                    83.0%	         0.68	                  0.51	                 0.58
+Random Forest (Optimized)	  85.1%	                    84.0%	         0.75	                  0.51	                 0.61
+
 
 # Final Classification Report (Random Forest Estimator)
 
@@ -174,15 +175,11 @@ Precision of 75% for rainy days indicates that when the model forecasts rain, it
 2. Atmospheric Feature Importance Rankings
 Extracted directly from the best-performing Random Forest estimator:
 
-1. **Humidity3pm:** Strongest individual indicator of same-day precipitation.
-
-2. **Sunshine:** Hours of sunlight inversely correlated with storm activity.
-
-3. **Pressure3pm / Pressure9am:** Barometric pressure shifts capturing incoming frontal systems.
-
-4. **Cloud3pm / Cloud9am:** Sky cloud coverage ratio confirming low-pressure troughs.
-
-5. **WindGustSpeed** Peak gust velocities driving storm fronts into the Melbourne basin.
+1. Humidity3pm: Strongest individual indicator of same-day precipitation.
+2. Sunshine: Hours of sunlight inversely correlated with storm activity.
+3. Pressure3pm / Pressure9am: Barometric pressure shifts capturing incoming frontal systems.
+4. Cloud3pm / Cloud9am: Sky cloud coverage ratio confirming low-pressure troughs.
+5. WindGustSpeed Peak gust velocities driving storm fronts into the Melbourne basin.
 
 📂 Repository Layout
 
